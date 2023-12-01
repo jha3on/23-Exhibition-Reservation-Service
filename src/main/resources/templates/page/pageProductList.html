@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>아티켓 : 전시</title>
+  <link th:href="@{/favicon.ico}" type="image/ico"/>
+  <link th:href="@{/style/reset.css}" rel="stylesheet">
+  <link th:href="@{/style/page/page.css}" rel="stylesheet">
+  <link th:href="@{/style/page/pageProductList.css}" rel="stylesheet">
+  <script th:src="@{/script/axios.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/utils.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/page.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/pageApi.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/pageProductList.js}" charset="utf-8" defer></script>
+</head>
+
+<body>
+<div class="page">
+  <th:block th:replace="~{/layout/pageHeaderV2 :: pageHeaderV2}"/>
+  <!-- 페이지 콘텐츠 영역 -->
+  <main class="v1 content js-content">
+    <!-- 상품 필터 영역 -->
+    <section class="product-filter">
+      <div class="product-type-tab">
+        <ul class="group-list">
+          <li class="group-list-item">
+            <button class="button js-product-type-tab" type="button" aria-selected="true" data-symbol="all">전체</button>
+          </li>
+          <li class="group-list-item">
+            <button class="button js-product-type-tab" type="button" aria-selected="false" data-symbol="production">기획전</button>
+          </li>
+          <li class="group-list-item">
+            <button class="button js-product-type-tab" type="button" aria-selected="false" data-symbol="permanent">상설전</button>
+          </li>
+          <li class="group-list-item">
+            <button class="button js-product-type-tab" type="button" aria-selected="false" data-symbol="special">특별전</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- 장소 필터 영역 -->
+    <section class="place-filter">
+      <div class="place-type-tab">
+        <ul class="group-list">
+          <li class="group-list-item">
+            <button class="button js-place-type-tab" type="button" aria-selected="true" data-symbol="all">전체</button>
+          </li>
+          <li class="group-list-item">
+            <button class="button js-place-type-tab" type="button" aria-selected="false" data-symbol="museum">미술관</button>
+          </li>
+          <li class="group-list-item">
+            <button class="button js-place-type-tab" type="button" aria-selected="false" data-symbol="gallery">갤러리</button>
+          </li>
+        </ul>
+      </div>
+      <div class="place-subtype-tab">
+        <div class="group-list-label">
+          <span class="text">지역</span>
+        </div>
+        <ul class="group-list js-place-subtype-list">
+          <li class="group-list-item">
+            <button class="button js-place-subtype-tab" type="button" aria-selected="true" data-symbol="all">전체</button>
+          </li>
+          <li class="group-list-item">
+            <button class="button js-place-subtype-tab" type="button" aria-selected="false" data-symbol="seoul">서울</button>
+          </li>
+          <li class="group-list-item">
+            <button class="button js-place-subtype-tab" type="button" aria-selected="false" data-symbol="gyeonggi">경기</button>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- 상품 정보 영역 -->
+    <section class="product-info">
+      <ul class="grid-list js-product-list"></ul>
+    </section>
+  </main>
+  <th:block th:replace="~{/page/section/pageProductListBottomSheetV1 :: pageProductListBottomSheetV1}"/>
+  <th:block th:replace="~{/layout/pageNavigatorV1 :: pageNavigatorV1}"/>
+</div>
+</body>
+
+</html>

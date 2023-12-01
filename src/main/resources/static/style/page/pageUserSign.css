@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+/* -------------------------------------------------------------------------------------------------------------------*/
+.content { /* [Fix] */
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0 0 0;
+}
+/* -------------------------------------------------------------------------------------------------------------------*/
+.logo { /* [Fix] */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 15px 0 15px 0;
+}
+.logo .image { /* [Fix] */
+  width: 60px;
+}
+.logo .caption { /* [Fix] */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.logo .logotype { /* [Fix] */
+  font-size: 20px;
+  font-weight: 700;
+}
+.logo .logotype-extra { /* [Fix] */
+  font-size: 12px;
+  font-weight: 500;
+  margin: -3px 0 0 0;
+}
+/* -------------------------------------------------------------------------------------------------------------------*/
+.form { /* [Fix] */
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0 10px 0;
+  padding: 0 40px 0 40px;
+  gap: 30px;
+}
+.form .form-field { /* [Fix] */
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.form .field-group.user-email {
+  display: flex;
+  align-items: center;
+}
+.form .field-group-item.user-email { /* [Fix] */
+  width: 45%;
+}
+.form .field-group-item.user-email-sign { /* [Fix] */
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form .field-group-item.user-email-sign .text { /* [Fix] */
+  font-size: 18px;
+  font-weight: 500;
+}
+.form .field-group.user-contact {
+  display: flex;
+  align-items: center;
+}
+.form .field-group-item.user-contact { /* [Fix] */
+  width: 30%;
+}
+.form .field-group-item.user-contact-sign { /* [Fix] */
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form .field-group-item.user-contact-sign .text { /* [Fix] */
+  font-size: 18px;
+  font-weight: 500;
+}
+.form .form-message .text {
+  margin: 0 0 0 10px;
+  color: var(--gray-700);
+  font-size: 13px;
+}
+/* -------------------------------------------------------------------------------------------------------------------*/
+.form-action {
+  width: 100%;
+  max-width: 412px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px 15px 20px;
+  position: fixed;
+  background: var(--white);
+  border-top: 1px solid var(--gray-300);
+  bottom: 0;
+}
+.form-action .button {
+  color: var(--white);
+  background: var(--black);
+  border: 1px solid var(--black);
+}
+.form-action .button:disabled {
+  background: var(--gray-600);
+  border: 1px solid var(--gray-600);
+}
+/* -------------------------------------------------------------------------------------------------------------------*/
+.form .form-field.user-email,
+.form .form-field.user-contact,
+.form .form-field.user-password {
+  display: none;
+}
+/* -------------------------------------------------------------------------------------------------------------------*/

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>아티켓 : 가입</title>
+  <link th:href="@{/favicon.ico}" type="image/ico"/>
+  <link th:href="@{/style/reset.css}" rel="stylesheet">
+  <link th:href="@{/style/page/page.css}" rel="stylesheet">
+  <link th:href="@{/style/page/pageUserSign.css}" rel="stylesheet">
+  <script th:src="@{/script/axios.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/utils.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/page.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/pageApi.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/pageUserSign.js}" charset="utf-8" defer></script>
+</head>
+
+<body>
+<div class="page">
+  <th:block th:replace="~{/layout/pageHeaderV2 :: pageHeaderV2}"/>
+  <!-- 페이지 콘텐츠 영역 -->
+  <main class="v1 content js-content">
+    <!-- -->
+    <section class="logo">
+      <img class="image" alt="로고" src="/image/icon/icon_fill_logo.svg">
+      <div class="caption">
+        <p class="logotype">아티켓</p>
+        <p class="logotype-extra">아티켓 멤버십</p>
+      </div>
+    </section>
+    <!-- -->
+    <section class="form">
+      <div class="form-field user-name js-user-name-field">
+        <div class="field-group user-name">
+          <div class="field-group-item user-name">
+            <input class="field user-name js-user-name" type="text" title="이름" placeholder="이름" autocomplete="false">
+          </div>
+        </div>
+        <div class="form-message user-name">
+          <p class="text js-user-name-message">이름을 입력해주세요.</p>
+        </div>
+      </div>
+      <div class="form-field user-email js-user-email-field">
+        <div class="field-group user-email">
+          <div class="field-group-item user-email">
+            <input class="field user-email js-user-email" type="text" title="이메일" placeholder="이메일" autocomplete="false">
+          </div>
+          <div class="field-group-item user-email-sign">
+            <span class="text">@</span>
+          </div>
+          <div class="field-group-item user-email">
+            <select class="field js-user-email-option" title="이메일 선택">
+              <option class="option" value="">선택</option>
+              <option class="option" value="naver.com">naver.com</option>
+              <option class="option" value="kakao.com">kakao.com</option>
+              <option class="option" value="gmail.com">gmail.com</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-message user-email">
+          <p class="text js-user-email-message">이메일을 입력해주세요.</p>
+        </div>
+      </div>
+      <div class="form-field user-contact js-user-contact-field">
+        <div class="field-group user-contact">
+          <div class="field-group-item user-contact">
+            <select class="field js-user-contact-option" title="연락처 선택">
+              <option class="option" value="">선택</option>
+              <option class="option" value="010">010</option>
+              <option class="option" value="011">011</option>
+            </select>
+          </div>
+          <div class="field-group-item user-contact-sign">
+            <span class="text">-</span>
+          </div>
+          <div class="field-group-item user-contact">
+            <input class="field js-user-contact-1" type="text" title="연락처" placeholder="----" autocomplete="false">
+          </div>
+          <div class="field-group-item user-contact-sign">
+            <span class="text">-</span>
+          </div>
+          <div class="field-group-item user-contact">
+            <input class="field js-user-contact-2" type="text" title="연락처" placeholder="----" autocomplete="false">
+          </div>
+        </div>
+        <div class="form-message user-contact">
+          <p class="text js-user-contact-message">연락처를 입력해주세요.</p>
+        </div>
+      </div>
+      <div class="form-field user-password js-user-password-field">
+        <div class="field-group user-password">
+          <div class="field-group-item user-password">
+            <input class="field user-password js-user-password" type="password" title="비밀번호" placeholder="비밀번호" autocomplete="false">
+          </div>
+        </div>
+        <div class="form-message user-password">
+          <p class="text js-user-password-message">영문, 숫자로 8자 이상, 16자 이내 입력해주세요.</p>
+        </div>
+      </div>
+    </section>
+    <!-- -->
+    <section class="form-action">
+      <button class="button button-black js-user-sign" disabled>다음 단계</button>
+    </section>
+  </main>
+  <th:block th:replace="~{/layout/pageModalV1 :: pageModalV1}"/>
+</div>
+</body>
+</html>

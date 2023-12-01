@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>아티켓 : 오류</title>
+  <link th:href="@{/favicon.ico}" type="image/ico"/>
+  <link th:href="@{/style/reset.css}" rel="stylesheet">
+  <link th:href="@{/style/page/page.css}" rel="stylesheet">
+  <link th:href="@{/style/page/pageError.css}" rel="stylesheet">
+  <script th:src="@{/script/axios.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/utils.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/page.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/pageError.js}" charset="utf-8" defer></script>
+</head>
+
+<body>
+<div class="page">
+  <th:block th:replace="~{/layout/pageHeaderV2 :: pageHeaderV2}"/>
+  <!-- 페이지 콘텐츠 영역 -->
+  <main class="v1 content js-content">
+    <section class="error">
+      <div class="error-info">
+        <img class="image" src="/image/icon/icon_fill_data_empty.svg" alt="">
+        <span class="text">원하시는 페이지를 찾을 수 없습니다.</span>
+        <span class="text">궁금하신 사항은 고객센터로 문의해주시기 바랍니다.</span>
+      </div>
+      <div class="error-info-action">
+        <button class="button js-error" type="button">홈 화면</button>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+
+</html>

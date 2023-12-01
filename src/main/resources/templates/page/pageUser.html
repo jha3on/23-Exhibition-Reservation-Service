@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>아티켓 : 마이 멤버십</title>
+  <link th:href="@{/favicon.ico}" type="image/ico"/>
+  <link th:href="@{/style/reset.css}" rel="stylesheet">
+  <link th:href="@{/style/page/page.css}" rel="stylesheet">
+  <link th:href="@{/style/page/pageUser.css}" rel="stylesheet">
+  <script th:src="@{/script/axios.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/utils.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/page.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/pageApi.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/pageUser.js}" charset="utf-8" defer></script>
+</head>
+
+<body>
+<div class="page">
+  <th:block th:replace="~{/layout/pageHeaderV2 :: pageHeaderV2}"/>
+  <!-- 콘텐츠 영역 -->
+  <main class="v1 content js-content">
+    <!-- 회원 영역 -->
+    <section class="user js-user"></section>
+    <!-- 회원 티켓 영역 -->
+    <section class="user-ticket js-user-ticket"></section>
+    <!-- 회원 카테고리 영역 -->
+    <section class="user-category js-user-category">
+      <div class="user-category-list">
+        <p class="group-list-label">고객 메뉴</p>
+        <ul class="group-list">
+          <li class="group-list-item">
+            <a class="group-item-link" href="/static">공지 사항</a>
+          </li>
+          <li class="group-list-item">
+            <a class="group-item-link" href="/static">고객 센터</a>
+          </li>
+          <li class="group-list-item">
+            <a class="group-item-link" href="/static">이용 안내</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <th:block th:replace="~{/layout/pageNavigatorV1 :: pageNavigatorV1}"/>
+</div>
+</body>
+</html>

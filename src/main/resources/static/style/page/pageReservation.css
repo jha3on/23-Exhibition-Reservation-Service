@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+/* -------------------------------------------------------------------------------------------------------------------*/
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 25px 0;
+  background: var(--gray-100);
+}
+/* -------------------------------------------------------------------------------------------------------------------*/
+.product {
+  padding: 0 0 20px 0;
+}
+.product-info {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 0 20px;
+  margin: 10px 0 0 0;
+  gap: 10px;
+}
+.product-info .text {
+  font-weight: 500;
+}
+.product-info .text-label {
+  color: var(--gray-700);
+}
+.product-info .product-name {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-info .product-place {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-info .product-period {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* -------------------------------------------------------------------------------------------------------------------*/
+.product-reservation {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px 0 20px;
+  margin: 10px 0 0 0;
+}
+.product-reservation .grid-list {}
+.product-reservation .grid-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0 15px 0;
+  border-bottom: 1px solid var(--gray-300);
+}
+.product-reservation .grid-list-item .product-option-name {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 10px;
+}
+.product-reservation .grid-list-item .product-option-name .text {
+  font-weight: 500;
+}
+.product-reservation .grid-list-item .product-option-name .price {
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+.product-reservation .grid-list-item .product-option-count {
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  gap: 10px;
+}
+.product-reservation .grid-list-item .product-option-choice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.product-reservation .grid-list-item .product-option-choice .button {
+  width: 25px;
+  height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black);
+  background: var(--gray-100);
+  border: 1px solid var(--gray-100);
+}
+.product-reservation .grid-list-item .product-option-choice .button .image {
+  width: 10px;
+  height: 10px;
+  background: transparent;
+  pointer-events: none;
+}
+.product-reservation .grid-list-item .product-option-choice .text {
+  width: 30px;
+  height: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--black);
+  background: var(--gray-100);
+  border: 1px solid var(--gray-100);
+  border-radius: 5px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+.product-reservation .grid-list-item .product-option-choice-result .price {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+/* -------------------------------------------------------------------------------------------------------------------*/
+.product-reservation-check {
+  width: 100%;
+  max-width: 412px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 15px 0;
+  bottom: 70px;
+  position: fixed;
+  background: var(--gray-100);
+}
+.product-option-total {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px 0 20px;
+  margin: 10px 0 0 0;
+  gap: 10px;
+}
+.product-option-total .product-option-total-count {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-option-total .product-option-total-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-option-total .product-option-total-count .text,
+.product-option-total .product-option-total-price .text {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.product-option-total .product-option-total-count .text-label,
+.product-option-total .product-option-total-price .text-label {
+  color: var(--gray-700);
+}
+/* -------------------------------------------------------------------------------------------------------------------*/
+.product-reservation-action {
+  width: 100%;
+  max-width: 412px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px 15px 20px;
+  position: fixed;
+  background: var(--white);
+  border-top: 1px solid var(--gray-300);
+  bottom: 0;
+}
+.product-reservation-action .group-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.product-reservation-action .group-button .reservation-button {
+  width: 80%;
+  color: var(--white);
+  background: var(--black);
+  border: 1px solid var(--black);
+}
+.product-reservation-action .group-button .reservation-cancel-button {
+  width: 20%;
+  color: var(--black);
+  background: var(--white);
+  border: 1px solid var(--gray-300);
+}
+/* -------------------------------------------------------------------------------------------------------------------*/

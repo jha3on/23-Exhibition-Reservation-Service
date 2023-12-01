@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:fragment="pageNavigatorV1">
+  <!-- 페이지 네비게이터 영역 -->
+  <section class="v1 navigator js-navigator">
+    <ul class="group-list">
+      <li class="group-list-item js-navigator-ticket">
+        <a class="group-item-link" href="/product/list">
+          <img class="image" alt="티켓 메뉴" src="/image/icon/icon_fill_ticket.svg">
+          <span class="text">티켓</span>
+        </a>
+      </li>
+      <li class="group-list-item js-navigator-home">
+        <a class="group-item-link" href="/">
+          <img class="image" alt="홈 메뉴" src="/image/icon/icon_fill_home.svg">
+          <span class="text">아티켓</span>
+        </a>
+      </li>
+      <li class="group-list-item js-navigator-user">
+        <a class="group-item-link" href="/user">
+          <img class="image" alt="마이페이지 메뉴" src="/image/icon/icon_fill_user.svg">
+          <span class="text">마이페이지</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+</th:block>
+
+</html>

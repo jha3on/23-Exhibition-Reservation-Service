@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:fragment="pageProductListBottomSheetV1">
+  <aside class="v1 sheet sheet-unstaged js-sheet">
+    <section class="sheet-overlay js-sheet-overlay"></section>
+    <section class="sheet-dialog js-sheet-dialog">
+      <div class="sheet-dialog-name-box">
+        <p class="text">지역 선택</p>
+      </div>
+      <div class="sheet-dialog-field-box">
+        <ul class="field-list">
+          <li class="field-list-item">
+            <label class="field-item-label">
+              <input class="field js-place-subtype-field" name="place-subtype" type="radio" aria-selected="true" data-symbol="all" checked>
+              전체
+            </label>
+          </li>
+          <li class="field-list-item">
+            <label class="field-item-label">
+              <input class="field js-place-subtype-field" name="place-subtype" type="radio" aria-selected="false" data-symbol="seoul">
+              서울
+            </label>
+          </li>
+          <li class="field-list-item">
+            <label class="field-item-label">
+              <input class="field js-place-subtype-field" name="place-subtype" type="radio" aria-selected="false" data-symbol="gyeonggi">
+              경기
+            </label>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </aside>
+</th:block>
+
+</html>

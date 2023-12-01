@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<th:block th:fragment="pageModalV1">
+  <!-- 페이지 모달 영역 -->
+  <aside class="v1 modal modal-unstaged js-modal">
+    <section class="modal-overlay js-modal-overlay"></section>
+    <section class="modal-dialog js-modal-dialog">
+      <div class="modal-dialog-content">
+        <p class="modal-dialog-name js-modal-name"></p>
+        <p class="modal-dialog-message js-modal-message"></p>
+      </div>
+      <div class="modal-dialog-action">
+        <button class="button js-modal-close" type="button">닫기</button>
+        <!-- <button class="button js-modal-close" type="button">닫기</button> -->
+      </div>
+    </section>
+  </aside>
+</th:block>
+
+</html>

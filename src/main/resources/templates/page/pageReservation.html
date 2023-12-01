@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>아티켓 : 예매</title>
+  <link th:href="@{/favicon.ico}" type="image/ico"/>
+  <link th:href="@{/style/reset.css}" rel="stylesheet">
+  <link th:href="@{/style/page/page.css}" rel="stylesheet">
+  <link th:href="@{/style/page/pageReservation.css}" rel="stylesheet">
+  <script th:src="@{/script/axios.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/utils.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/page.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/pageApi.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/pageReservation.js}" charset="utf-8" defer></script>
+</head>
+
+<body>
+<div class="page">
+  <th:block th:replace="~{/layout/pageHeaderV2 :: pageHeaderV2}"/>
+  <!-- 페이지 콘텐츠 영역 -->
+  <main class="v1 content js-content">
+    <!-- 상품 영역 -->
+    <section class="product">
+      <div class="product-info">
+        <div class="product-name">
+          <span class="text-label">관람 상품</span>
+          <span class="text js-product-name"></span>
+        </div>
+        <div class="product-place">
+          <span class="text-label">관람 장소</span>
+          <span class="text js-product-place"></span>
+        </div>
+        <div class="product-period">
+          <span class="text-label">관람 기간</span>
+          <span class="text js-product-period"></span>
+        </div>
+      </div>
+    </section>
+    <!-- 상품 예매 영역 -->
+    <section class="product-reservation">
+      <ul class="grid-list js-product-price-list"></ul>
+    </section>
+    <!-- 상품 예매 확인 영역 -->
+    <section class="product-reservation-check">
+      <div class="product-option-total">
+        <span class="text">예매 티켓을 확인하세요.</span>
+        <div class="product-option-total-count">
+          <span class="text-label">예매 매수</span>
+          <span class="text js-option-total-count">0매</span>
+        </div>
+        <div class="product-option-total-price">
+          <span class="text-label">예매 금액</span>
+          <span class="text js-option-total-price">0원</span>
+        </div>
+      </div>
+    </section>
+    <!-- 상품 예매 영역 -->
+    <section class="product-reservation-action">
+      <div class="group-button">
+        <button class="button reservation-cancel-button js-reservation-cancel">취소</button>
+        <button class="button reservation-button js-reservation">예매하기</button>
+      </div>
+    </section>
+  </main>
+  <th:block th:replace="~{/layout/pageModalV1 :: pageModalV1}"/>
+</div>
+</body>
+</html>

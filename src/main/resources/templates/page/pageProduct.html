@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>아티켓 : 전시</title>
+  <link th:href="@{/favicon.ico}" type="image/ico"/>
+  <link th:href="@{/style/reset.css}" rel="stylesheet">
+  <link th:href="@{/style/page/page.css}" rel="stylesheet">
+  <link th:href="@{/style/page/pageProduct.css}" rel="stylesheet">
+  <script th:src="@{/script/axios.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/utils.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/page.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/pageApi.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/pageProduct.js}" charset="utf-8" defer></script>
+</head>
+
+<body>
+<div class="page">
+  <th:block th:replace="~{/layout/pageHeaderV2 :: pageHeaderV2}"/>
+  <!-- 페이지 콘텐츠 영역 -->
+  <main class="v1 content js-content">
+    <!-- 상품 이미지 영역-->
+    <section class="product-image js-product-image"></section>
+    <!-- 상품 정보 영역 -->
+    <section class="product-info js-product"></section>
+    <!-- 상품 상세 영역 -->
+    <section class="product-detail">
+      <div class="product-detail-tab">
+        <ul class="group-list">
+          <li class="group-list-item">
+            <button class="button js-product-tab js-product-price-tab" type="button" aria-selected="true">가격 안내</button>
+          </li>
+          <li class="group-list-item">
+            <button class="button js-product-tab js-product-review-tab" type="button" aria-selected="false">관람 후기</button>
+          </li>
+          <li class="group-list-item">
+            <button class="button js-product-tab js-product-place-tab" type="button" aria-selected="false">장소 정보</button>
+          </li>
+        </ul>
+      </div>
+      <div class="product-detail-content js-product-content"></div>
+    </section>
+    <!-- 상품 액션 영역 -->
+    <section class="product-action">
+      <div class="product-action-group">
+        <button class="button product-like js-product-like" type="button"></button>
+        <button class="button product-reservation js-product-reservation" type="button">예매하기</button>
+      </div>
+    </section>
+  </main>
+  <th:block th:replace="~{/layout/pageModalV1 :: pageModalV1}"/>
+</div>
+</body>
+
+</html>

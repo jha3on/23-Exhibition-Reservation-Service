@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+/* -------------------------------------------------------------------------------------------------------------------*/
+.content {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0 0 0;
+}
+/* -------------------------------------------------------------------------------------------------------------------*/
+.error {
+  top: 40%;
+  left: 50%;
+  width: 412px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  gap: 10px;
+}
+.error .error-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.error .error-info .text {
+  font-size: 13.5px;
+  font-weight: 500;
+}
+.error .error-info .image {
+  width: 50px;
+  height: 50px;
+  margin: 0 0 10px 0;
+}
+.error .error-info-action .button {
+  height: 32px;
+  border-radius: 32px;
+  font-size: 13px;
+  color: var(--black);
+  background: var(--white);
+  border: 1px solid var(--gray-300);
+}
+/* -------------------------------------------------------------------------------------------------------------------*/

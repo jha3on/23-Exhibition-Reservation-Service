@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>아티켓 : 예매 내역</title>
+  <link th:href="@{/favicon.ico}" type="image/ico"/>
+  <link th:href="@{/style/reset.css}" rel="stylesheet">
+  <link th:href="@{/style/page/page.css}" rel="stylesheet">
+  <link th:href="@{/style/page/pageReservationList.css}" rel="stylesheet">
+  <script th:src="@{/script/axios.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/utils.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/page.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/pageApi.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/pageReservationList.js}" charset="utf-8" defer></script>
+</head>
+
+<body>
+<div class="page">
+  <th:block th:replace="~{/layout/pageHeaderV2 :: pageHeaderV2}"/>
+  <main class="v1 content js-content">
+    <!-- 예매 필터 영역 -->
+    <section class="reservation-filter">
+      <div class="reservation-type-tab">
+        <ul class="group-list">
+          <li class="group-list-item">
+            <button class="button js-reservation-tab js-reservation-all-tab" type="button" aria-selected="true" data-symbol="all">
+              전체 예매
+              <span class="text js-reservation-all">0</span>
+            </button>
+          </li>
+          <li class="group-list-item">
+            <button class="button js-reservation-tab js-reservation-ready-tab" type="button" aria-selected="false" data-symbol="ready">
+              이용 예정
+              <span class="text js-reservation-ready">0</span>
+            </button>
+          </li>
+          <li class="group-list-item">
+            <button class="button js-reservation-tab js-reservation-complete-tab" type="button" aria-selected="false" data-symbol="completed">
+              이용 완료
+              <span class="text js-reservation-complete">0</span>
+            </button>
+          </li>
+          <li class="group-list-item">
+            <button class="button js-reservation-tab js-reservation-cancel-tab" type="button" aria-selected="false" data-symbol="canceled">
+              예매 취소
+              <span class="text js-reservation-cancel">0</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- 예메 정보 영역 -->
+    <section class="reservation-info">
+      <ul class="grid-list js-reservation-list"></ul>
+    </section>
+  </main>
+  <th:block th:replace="~{/layout/pageModalV1 :: pageModalV1}"/>
+  <th:block th:replace="~{/layout/pageNavigatorV1 :: pageNavigatorV1}"/>
+</div>
+</body>
+</html>

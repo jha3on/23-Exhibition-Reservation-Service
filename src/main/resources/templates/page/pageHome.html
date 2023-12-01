@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>아티켓 : 홈</title>
+  <link th:href="@{/favicon.ico}" type="image/ico"/>
+  <link th:href="@{/style/reset.css}" rel="stylesheet">
+  <link th:href="@{/style/swiper.css}" rel="stylesheet">
+  <link th:href="@{/style/page/page.css}" rel="stylesheet">
+  <link th:href="@{/style/page/pageHome.css}" rel="stylesheet">
+  <script th:src="@{/script/axios.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/color.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/swiper.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/utils.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/page.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/pageApi.js}" charset="utf-8" defer></script>
+  <script th:src="@{/script/page/pageHome.js}" charset="utf-8" defer></script>
+</head>
+
+<body>
+<div class="app">
+  <th:block th:replace="~{/layout/pageHeaderV2 :: pageHeaderV2}"/>
+  <!-- 페이지 콘텐츠 영역 -->
+  <main class="v1 content js-page-content">
+    <!-- 프로모션 영역 -->
+    <section class="promotion js-1">
+      <p class="text swiper-label highlight">오늘의 전시회</p>
+      <div class="swiper swiper-container">
+        <ul class="swiper-wrapper grid-list js-promotion-list"></ul>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- 프로모션 영역 -->
+<!--    <section class="promotion js-2">-->
+<!--      <p class="text swiper-label highlight">새로운 전시회</p>-->
+<!--      <div class="swiper swiper-container">-->
+<!--        <ul class="swiper-wrapper grid-list js-promotion-list"></ul>-->
+<!--        <div class="swiper-pagination"></div>-->
+<!--      </div>-->
+<!--    </section>-->
+    <!-- 프로모션 영역 -->
+<!--    <section class="promotion js-3">-->
+<!--      <p class="text swiper-label highlight">특별한 전시회</p>-->
+<!--      <div class="swiper swiper-container">-->
+<!--        <ul class="swiper-wrapper grid-list js-promotion-list"></ul>-->
+<!--        <div class="swiper-pagination"></div>-->
+<!--      </div>-->
+<!--    </section>-->
+    <!-- 링크 영역 -->
+    <section class="test">
+      <p class="text-label highlight">테스트 화면</p>
+      <ul>
+        <li>
+          <a href="/user"><span>#</span> 회원 화면</a>
+        </li>
+        <li>
+          <a href="/user/sign"><span>#</span> 회원 가입 화면</a>
+        </li>
+        <li>
+          <a href="/user/login"><span>#</span> 회원 로그인 화면</a>
+        </li>
+        <li>
+          <a href="/product/1"><span>#</span> 상품 화면</a>
+        </li>
+        <li>
+          <a href="/product/list"><span>#</span> 상품 목록 화면</a>
+        </li>
+        <li>
+          <a href="/reservation/1"><span>#</span> 예매 화면</a>
+        </li>
+        <li>
+          <a href="/reservation/list"><span>#</span> 예매 목록 화면</a>
+        </li>
+<!--        <li>-->
+<!--          <a href="/search"><span>#</span> 검색 화면</a>-->
+<!--        </li>-->
+        <li>
+          <a href="/error"><span>#</span> 오류 화면</a>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <th:block th:replace="~{/layout/pageNavigatorV1 :: pageNavigatorV1}"/>
+</div>
+</body>
+
+</html>
