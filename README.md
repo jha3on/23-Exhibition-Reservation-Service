@@ -20,7 +20,7 @@
   <h2>1. 개발 환경</h2>
 
 - <p><b>OS: </b>Windows (11, 64 Bit)</p>
-- <p><b>DB: </b>Maria DB</p>
+- <p><b>DB: </b>Maria DB, Redis</p>
 - <p><b>IDE: </b>IntelliJ</p>
 </div>
 <br>
@@ -35,6 +35,7 @@
 ![Alt text](./github/23-01-05.png)
 ![Alt text](./github/23-01-06.png)
 ![Alt text](./github/23-01-07.png)
+![Alt text](./github/23-01-08.png)
 </div>
 <br>
 
